@@ -1,3 +1,9 @@
+albums.ser
+thumbnails/*.jpg
+target
+.classpath
+.project
+.settings
 # Compiled class file
 *.class
 
