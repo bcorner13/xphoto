@@ -55,7 +55,9 @@ public class MediaIndexer extends SimpleFileVisitor<Path> {
 	public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
 		if (album.getPhotos().size() > 0) {
 			albums.add(album);
+			album  = new Album();
 		}
+		
 		return FileVisitResult.CONTINUE;
 	}
 
@@ -111,7 +113,7 @@ public class MediaIndexer extends SimpleFileVisitor<Path> {
 		}
 
 		album.getPhotos().add(photo);
-		System.out.println(file.getAbsolutePath());
+		System.out.println("Indexed: " + file.getAbsolutePath());
 
 	}
 	
@@ -133,6 +135,6 @@ public class MediaIndexer extends SimpleFileVisitor<Path> {
 
 		File output = new File("thumbnails/" + UUID + "_thumb.jpg");
 		ImageIO.write(thumbnail, "JPG", output);
-		System.out.println((System.currentTimeMillis() - start) / 1000F);
+		System.out.println("Made thumbnail in: " + (System.currentTimeMillis() - start) / 1000F + "ms");
 	}
 }

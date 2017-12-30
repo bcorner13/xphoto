@@ -9,10 +9,14 @@ public class Album implements Serializable, Comparable<Album> {
 	 * 
 	 */
 	private static final long serialVersionUID = -5266331053582601538L;
-	private List<Photo> photos = new ArrayList<>();
+	private List<Photo> photos;
 	private String title;
 	private long creationTime;
 	private long id;
+	
+	public Album () {
+		this.photos = new ArrayList<>();
+	}
 	
 	public List<Photo> getPhotos() {
 		return photos;
