@@ -25,7 +25,8 @@ It uses rapidoid-http-fast to serve the image files, which is the fastest http s
 - Install Java 8 and make sure its on your path
 - Modify xphoto.properties and change "photos" and "server.port" to suit your needs
 - run "java -jar xphoto.jar"
-
+- wait for the app to make thumbnails and index all your photos
+- open http://localhost:8080 in your browser (or via your pc ip to other devices)
 ---
 
 ## FAQ
